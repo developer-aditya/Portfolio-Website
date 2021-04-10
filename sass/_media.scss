@@ -1,0 +1,152 @@
+///////////////////////////////////////////////////////  Media Query  ///////////////////////////////////////////////////////////
+
+// Tablets And SmartPhones
+@media (max-width: 900px) {
+   // Header-home
+   #header {
+      &-home {
+         height: 70vh;
+         overflow: hidden;
+      }
+      &-content {
+         font-size: 3rem;
+         line-height: 1.35;
+         padding-top: 4rem;
+      }
+   }
+
+   // Home-page
+   #home {
+      &-a {
+         .specials {
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+      &-b {
+         & .stats {
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+      &-c {
+         .process {
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+   }
+
+   // About Page
+   #about {
+      &-d {
+         .tests {
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+   }
+
+   // Work Page
+   .items {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+// SmartPhones
+@media (max-width: 600px) {
+   #about {
+      &-header {
+         height: auto;
+         border: none;
+         #main-nav {
+            padding-top: 0;
+            li {
+               margin-bottom: 1.25rem;
+            }
+         }
+      }
+   }
+
+   #header {
+      &-home {
+         height: 100vh;
+      }
+      &-content {
+         padding-top: 3rem;
+         font-size: 3rem;
+         line-height: 1.25;
+      }
+   }
+   #main-nav {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+   }
+   // Home-page
+   #home {
+      &-a {
+         .specials {
+            grid-template-columns: repeat(1, 1fr);
+         }
+      }
+      &-b {
+         & .stats {
+            grid-template-columns: repeat(2, 1fr);
+            div {
+               padding: 1.5rem;
+            }
+         }
+      }
+      &-c {
+         .process {
+            grid-template-columns: repeat(1, 1fr);
+         }
+      }
+   }
+
+   // About Page
+   #about {
+      &-a {
+         .grid-area {
+            grid-template-areas:
+               'bg-img'
+               'details'
+               'awd-1'
+               'awd-2'
+               'awd-3';
+            gap: 0;
+         }
+      }
+      &-d {
+         .tests {
+            grid-template-columns: repeat(1, 1fr);
+            .testimonial {
+               margin-bottom: 1.5rem;
+            }
+         }
+      }
+   }
+
+   // Work Page
+   .items {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+   // contact
+   #contact {
+      &-a {
+         .text-fields {
+            grid-template-areas:
+               'name'
+               'email'
+               'subject'
+               'phone'
+               'message'
+               'message';
+            gap: 0.75rem;
+         }
+      }
+      &-c {
+         h1 {
+            line-height: 1.35;
+         }
+      }
+   }
+}
